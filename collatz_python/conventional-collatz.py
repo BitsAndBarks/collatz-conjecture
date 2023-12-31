@@ -27,7 +27,7 @@ def longest_sequence_in_range(range_limit):
 
 
 def main():
-    starting_number_limit = 1_000_000
+    starting_number_limit = int(input("Enter number up to which sequence is to be calculated: "))
 
     start_time = time.time()
     number, sequence = longest_sequence_in_range(starting_number_limit)
@@ -37,9 +37,8 @@ def main():
 
     print(f"The number between 1 and {starting_number_limit} that produces the longest Collatz sequence is {number} "
           f"and has {len(sequence)} elements.")
-    print("The sequence is:")
-    print(sequence)
-    print(f"It took {duration: .2f} seconds to calculate.")
+    print(f"The sequence is: {sequence}")
+    print(f"It took {duration} seconds to calculate.")
 
 
 main()
